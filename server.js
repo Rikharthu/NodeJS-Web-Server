@@ -93,6 +93,12 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
+    });
+});
+
 app.listen(port, () => {
     // callback function when server is started
     console.log(`Server is up on port ${port}`)
