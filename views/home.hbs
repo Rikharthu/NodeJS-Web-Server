@@ -1,0 +1,17 @@
+{{!-- A hbs template file --}}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Some Website</title>
+</head>
+
+<body>
+    {{!-- Injecting a partial view --}} {{>header}} {{!-- {{helper_name its_arguments}} --}}
+    <p>{{screamIt welcomeMessage}}</p>
+
+    {{>footer}}
+</body>
+
+</html>
