@@ -4,6 +4,9 @@ const fs = require('fs')
 
 var app = express();
 
+// Get port that heroku uses from environment variables or use default
+const port = process.env.PORT || 3000;
+
 const isMaintenance = false;
 
 // To make nodemon watch for changes in hbs files, use the following command:
@@ -90,7 +93,7 @@ app.get('/about', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     // callback function when server is started
-    console.log('Server is up on port 3000')
+    console.log(`Server is up on port ${port}`)
 }); // http://localhost:3000/
